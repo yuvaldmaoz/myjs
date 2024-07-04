@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Paragraph Visibility</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <p id="paragraph1" class="visible ">This is paragraph 1.</p>
+        <p id="paragraph2" class="visible">This is paragraph 2.</p>
+        <p id="paragraph3" class="visible">This is paragraph 3.</p>
+        
+        <button onclick="toggleVisibility('paragraph1')">Toggle Paragraph 1</button>
+        <button onclick="toggleVisibility('paragraph2')">Toggle Paragraph 2</button>
+        <button onclick="toggleVisibility('paragraph3')">Toggle Paragraph 3</button>
+    </section>
+
+    <script>
+        function toggleVisibility(elementId) {
+            const element = document.getElementById(elementId);
+            if (element.classList.contains('visible')) {
+                element.classList.remove('visible');
+                element.classList.add('hidden');
+            } else {
+                element.classList.remove('hidden');
+                element.classList.add('visible');
+            }
+        }
+    </script>
+</body>
+</html>

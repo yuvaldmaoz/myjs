@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+</head>
+<body>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+
+<h1>Dynamic Class Addition</h1>
+<p id="myParagraph">This is a sample paragraph.</p>
+<input type="text" id="classInput" placeholder="Enter class name">
+<button onclick="addClass()">Add Class</button>
+
+<script>
+    function addClass() {
+        const className = document.getElementById('classInput').value;
+        const paragraph = document.getElementById('myParagraph');
+        paragraph.classList.add(className);
+    }
+</script>
+
+</body>
+</html>
